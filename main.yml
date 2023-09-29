@@ -1,0 +1,10 @@
+---
+- name: "Customizing Kali"
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: "Demo Debug"
+      debug:
+        msg: "Test Print"
+  roles: 
+    - role: "roles/configure-tmux"
