@@ -1,0 +1,13 @@
+---
+- name: "Update apt repos & programs"
+  apt: update_cache=yes upgrade=dist
+
+- name: "Cleanup 1.1"
+  ansible.builtin.apt:
+    autoremove: yes
+    autoclean: yes
+
+- name: "Cleanup 1.2"
+  apt:
+    clean: yes
+

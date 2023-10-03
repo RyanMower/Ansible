@@ -7,4 +7,6 @@
       debug:
         msg: "Test Print"
   roles: 
+    - role: "roles/update"
+    - role: "roles/install-tools"
     - role: "roles/configure-tmux"
