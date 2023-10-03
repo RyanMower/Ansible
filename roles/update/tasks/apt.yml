@@ -1,13 +1,19 @@
 ---
 - name: "Update apt repos & programs"
   apt: update_cache=yes upgrade=dist
+  become: true
+  become_method: sudo
 
 - name: "Cleanup 1.1"
   ansible.builtin.apt:
     autoremove: yes
     autoclean: yes
+  become: true
+  become_method: sudo
 
 - name: "Cleanup 1.2"
   apt:
     clean: yes
+  become: true
+  become_method: sudo
 
