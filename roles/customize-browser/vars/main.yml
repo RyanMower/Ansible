@@ -1,8 +1,5 @@
 ---
-# vars file for customize-browser
-
-vars:
-  FirefoxPlugins:
-    - "darkreader"
-    - "foxyproxy-standard"
-    - "wappalyzer"
+FirefoxPlugins:
+  - "darkreader"
+  - "foxyproxy-standard"
+  - "wappalyzer"

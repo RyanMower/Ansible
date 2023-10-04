@@ -2,11 +2,8 @@
 - name: "Customizing Kali"
   hosts: localhost
   connection: local
-  tasks:
-    - name: "Demo Debug"
-      debug:
-        msg: "Test Print"
   roles: 
-    - role: "roles/update"
+    #- role: "roles/update"
     - role: "roles/install-tools"
     - role: "roles/configure-tmux"
+    - role: "roles/customize-browser"

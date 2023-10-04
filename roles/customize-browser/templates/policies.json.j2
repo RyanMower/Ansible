@@ -24,13 +24,11 @@
       "Locked": false
     },
     "Extensions": {
-       "Install": [
-          {% for item in FirefoxPlugins %}
-             "https://addons.mozilla.org/firefox/downloads/latest/{{ item }}/latext.xpi" {{ "," if not loop.last}}
-          {% endfor %}
-       ],
-       "Uninstall": ["bad_addon_id@mozilla.org"],
-       "Locked":  ["addon_id@mozilla.org"]
-  },
+      "Install": [
+{% for item in FirefoxPlugins %}
+        "https://addons.mozilla.org/firefox/downloads/latest/{{ item }}/latest.xpi"{{ "," if not loop.last }}
+{% endfor %}
+      ]
+    }
   }
 }
