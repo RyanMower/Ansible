@@ -1,0 +1,36 @@
+{
+  "policies": {
+    "DisplayBookmarksToolbar": true,
+    "NoDefaultBookmarks": true,
+    "OverrideFirstRunPage": "",
+    "OverridePostUpdatePage": "",
+    "Homepage": {
+      "URL": "file:///usr/share/kali-defaults/web/homepage.html",
+      "Locked": false,
+      "StartPage": "homepage"
+    },
+    "DisableTelemetry": true,
+    "NetworkPrediction": false,
+    "DNSOverHTTPS": {
+      "Enabled": false
+    },
+    "CaptivePortal": false,
+    "FirefoxHome": {
+      "Search": true,
+      "TopSites": true,
+      "Highlights": false,
+      "Pocket": false,
+      "Snippets": false,
+      "Locked": false
+    },
+    "Extensions": {
+       "Install": [
+          {% for item in FirefoxPlugins %}
+             "https://addons.mozilla.org/firefox/downloads/latest/{{ item }}/latext.xpi" {{ "," if not loop.last}}
+          {% endfor %}
+       ],
+       "Uninstall": ["bad_addon_id@mozilla.org"],
+       "Locked":  ["addon_id@mozilla.org"]
+  },
+  }
+}

@@ -1,0 +1,3 @@
+---
+# tasks file for customize-browser
+- include: "firefox.yml"
