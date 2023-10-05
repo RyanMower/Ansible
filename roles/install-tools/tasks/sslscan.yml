@@ -1,0 +1,8 @@
+---
+# tasks file for install-tools
+- name: "Install SSLScan"
+  apt:
+    name: sslscan 
+    state: present
+  become: true
+  become_method: sudo

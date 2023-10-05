@@ -1,0 +1,8 @@
+---
+# tasks file for install-tools
+- name: "Install CrackMapExec"
+  apt:
+    name: crackmapexec 
+    state: present
+  become: true
+  become_method: sudo

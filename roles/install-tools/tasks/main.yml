@@ -1,2 +1,12 @@
 ---
-# tasks file for install-tools
+- include: "nuclei.yml"
+- include: "sqlmap.yml"
+- include: "nikto.yml"
+- include: "nmap.yml"
+- include: "sslscan.yml"
+- include: "responder.yml"
+- include: "crackmapexec.yml"
+- include: "gobuster.yml"
+- include: "seclists.yml"
+- include: "jython.yml"
+- include: "httpx.yml"

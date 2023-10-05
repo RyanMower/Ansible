@@ -1,0 +1,8 @@
+---
+# tasks file for install-tools
+- name: "Install SecLists"
+  apt:
+    name: seclists 
+    state: present
+  become: true
+  become_method: sudo

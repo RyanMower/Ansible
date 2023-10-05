@@ -1,0 +1,8 @@
+---
+# tasks file for install-tools
+- name: "Install Nuclei"
+  apt:
+    name: nuclei
+    state: present
+  become: true
+  become_method: sudo

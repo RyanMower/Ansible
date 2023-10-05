@@ -2,8 +2,13 @@
 - name: "Customizing Kali"
   hosts: localhost
   connection: local
+  vars:
+    burpsuite_user: kali
+    # burpsuite_edition: pro # Uncomment for pro
+    # burpsuite_pro_license_key: <LICENSE_KEY_STRING> # Uncomment for pro
   roles: 
     #- role: "roles/update"
     - role: "roles/install-tools"
     - role: "roles/configure-tmux"
+    - role: "roles/configure-burpsuite"
     - role: "roles/customize-browser"

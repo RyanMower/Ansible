@@ -1,0 +1,8 @@
+---
+# tasks file for install-tools
+- name: "Install Responder"
+  apt:
+    name: responder
+    state: present
+  become: true
+  become_method: sudo

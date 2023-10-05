@@ -1,0 +1,8 @@
+---
+# tasks file for install-tools
+- name: "Install SQLmap"
+  apt:
+    name: sqlmap 
+    state: present
+  become: true
+  become_method: sudo

@@ -1,0 +1,8 @@
+---
+# tasks file for install-tools
+- name: "Install Gobuster"
+  apt:
+    name: gobuster 
+    state: present
+  become: true
+  become_method: sudo
