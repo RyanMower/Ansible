@@ -11,3 +11,4 @@
 - include: "jython.yml"
 - include: "httpx.yml"
 - include: "pcredz.yml"
+- include: "ruler.yml"

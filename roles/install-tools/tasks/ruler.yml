@@ -1,0 +1,17 @@
+---
+# tasks file for install-tools
+- name: "Install Ruler"
+  ansible.builtin.get_url:
+    url: "https://github.com/sensepost/ruler/releases/download/2.4.1/ruler-linux64"
+    dest:  "{{ ansible_env.HOME }}/.local/bin/ruler"
+    mode: '0755'
+
+- name: "Update PATH if not already updated"
+  lineinfile:
+    path: "~/.zshrc"
+    state: present
+    regexp: '^export PATH="\$PATH:/home/kali/.local/bin"$'
+    line: 'export PATH="$PATH:/home/kali/.local/bin"'
+
+
+
