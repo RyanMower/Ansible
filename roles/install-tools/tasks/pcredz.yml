@@ -1,0 +1,43 @@
+---
+# tasks file for install-tools
+- name: "Install Pcredz Dependencies - pip"
+  apt:
+    name: python3-pip 
+    state: present
+  become: true
+  become_method: sudo
+
+- name: "Install Pcredz Dependencies - libpcap-dev"
+  ansible.builtin.apt:
+    name: libpcap-dev
+    state: present
+  become: true
+  become_method: sudo
+
+- name: "Install Pcredz Dependencies - Cython"
+  ansible.builtin.pip:
+    name: Cython 
+    executable: pip3
+    state: present
+
+- name: "Install Pcredz Dependencies - python-libpcap"
+  ansible.builtin.pip:
+    name: Cython 
+    executable: pip3
+    state: present
+
+- name: "Install Pcredz"
+  ansible.builtin.get_url:
+    url: "https://raw.githubusercontent.com/lgandx/PCredz/master/Pcredz"
+    dest:  "{{ ansible_env.HOME }}/.local/bin/pcredz"
+    mode: '0755'
+
+- name: "Add directory to PATH variable in .zshrc"
+  ansible.builtin.lineinfile:
+    path: ~/.zshrc
+    line: 'export PATH="$PATH:{{ ansible_env.HOME }}/.local/bin"'
+    state: present
+  run_once: true
+
+
+

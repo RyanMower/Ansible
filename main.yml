@@ -9,6 +9,6 @@
   roles: 
     #- role: "roles/update"
     - role: "roles/install-tools"
-    - role: "roles/configure-tmux"
-    - role: "roles/configure-burpsuite"
-    - role: "roles/customize-browser"
+      #- role: "roles/configure-tmux"
+      #- role: "roles/configure-burpsuite"
+      #- role: "roles/customize-browser"

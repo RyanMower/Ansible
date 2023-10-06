@@ -10,3 +10,4 @@
 - include: "seclists.yml"
 - include: "jython.yml"
 - include: "httpx.yml"
+- include: "pcredz.yml"
