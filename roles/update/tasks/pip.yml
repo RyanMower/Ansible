@@ -1,0 +1,5 @@
+---
+- name: "Install JMEspath"
+  ansible.builtin.pip:
+    name: jmespath
+    state: present
